@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Towards Reliable Identification of Diffusion-based Image Manipulations.">
+  <meta name="keywords" content="ifdl, image, forgery, identification, robust, robustness, generalised, generalized, generalisation, generalization, detection, localisation, localization, tampering, inpainter, diffusion, manipulation, alteration, deepfake">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Towards Reliable Identification of Diffusion-based Image Manipulations</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/radar.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://alex-costanzino.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://cvlab-unibo.github.io/Depth4ToM/">
+            Depth4ToM
+          </a>
+          <a class="navbar-item" href="https://cvlab-unibo.github.io/CrossmodalFeatureMapping/">
+            CrossmodalFeatureMapping
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Towards Reliable Identification of Diffusion-based Image Manipulations</h1>
+          <div class="is-size-5 publication-authors">
+            
+            <span class="author-block">
+              <a href="https://alex-costanzino.github.io/">Alex Costanzino</a><sup>1</sup>,
+            </span>
+            
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/woody-bayliss-750a27325/">Woody Bayliss</a><sup>2</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://skf0321.wixsite.com/juil">Juil Sock</a><sup>2</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/marc-gorriz/">Marc Gorriz Blanch</a><sup>2</sup>,
+            </span>
+
+            <span class="author-block">
+              Danijela Horak<sup>2</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://mbzuai.ac.ae/study/faculty/ivan-laptev/">Ivan Laptev</a><sup>3</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://eng.ox.ac.uk/people/philip-torr/">Philip Torr</a><sup>4</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://fabvio.github.io/">Fabio Pizzati</a><sup>3</sup>
+            </span>
+
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Bologna,</span>
+            <span class="author-block"><sup>2</sup>BBC R&D,</span>
+            <span class="author-block"><sup>3</sup>MBZUAI,</span>
+            <span class="author-block"><sup>4</sup>University of Oxford</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://www.arxiv.org/abs/2506.05466"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/bbc/PAIR"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Changing facial expressions, gestures, or background details may dramatically alter the meaning conveyed by an image. 
+            Notably, recent advances in diffusion models greatly improve the quality of image manipulation while also opening the door to misuse. 
+            Identifying changes made to authentic images, thus, becomes an important task, constantly challenged by new diffusion-based editing tools. 
+          </p>
+          <p>
+            To this end, we propose a novel approach for <u>R</u>eli<u>A</u>ble i<u>D</u>entification of inpainted <u>AR</u>eas (RADAR). 
+            RADAR builds on existing foundation models and combines features from different image modalities. 
+            It also incorporates an auxiliary contrastive loss that helps to isolate manipulated image patches. 
+          </p>
+          <p>
+            We demonstrate these techniques to significantly improve both the accuracy of our method and its generalisation to a large number of diffusion models. 
+            To support realistic evaluation, we further introduce BBC-PAIR, a new comprehensive benchmark, with images tampered by 28 diffusion models. 
+            Our experiments show that RADAR achieves excellent results, outperforming the state-of-the-art in detecting and localising image edits made by both seen and unseen diffusion models.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{costanzino2025radar,
+  author    = {Costanzino, Alex and Bayliss, Woody and Sock, Juil and Gorriz Blanch, Marc and Horak, Danijela and Laptev, Ivan and Torr, Philip and Pizzati, Fabio},
+  title     = {Towards Reliable Identification of Diffusion-based Image Manipulations},
+  journal   = {arXiv},
+  year      = {2025},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
